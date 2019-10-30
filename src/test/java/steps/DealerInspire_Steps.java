@@ -4,6 +4,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import pages.DealerInspireHomePage;
 import utilities.Config;
 import utilities.Driver;
@@ -39,5 +40,8 @@ public class DealerInspire_Steps {
     public void verify_warning_message_displays_as_expected_and_verify_text_color() {
         Assert.assertTrue("Warning message IS NOT displaying",dealerInspireHomePage.warningMessage.isDisplayed());
         Assert.assertEquals("The username or password you entered is not correct.", dealerInspireHomePage.warningMessage.getText());
+        String colorRGB = (String)((JavascriptExecutor)Driver.getDriver()).executeScript("return getComputedStyle(document.querySelector(\".auth-errors\")).color;");
+        String expectedColor = "rgb(169, 68, 66)";
+        Assert.assertEquals("The of the message is red",colorRGB,expectedColor );
     }
 }

@@ -1,0 +1,88 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Dealer Inspire login with invalid credentials",
+        "description": "",
+        "id": "dealer-inspire-login-feature;dealer-inspire-login-with-invalid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 11538756700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on at https://conversations.dealerinspire.com",
+            "match": {
+              "location": "DealerInspire_Steps.user_is_on_at_https_conversations_dealerinspire_com()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 824969100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User attempts a login with invalid credentials",
+            "match": {
+              "location": "DealerInspire_Steps.user_attempts_a_login_with_invalid_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 230284100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Verify warning message displays as expected",
+            "match": {
+              "location": "DealerInspire_Steps.verify_warning_message_displays_as_expected()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 152113000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User attempts to reset the password with an invalid username",
+            "match": {
+              "location": "DealerInspire_Steps.user_attempts_to_reset_the_password_with_an_invalid_username()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 64681000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Verify warning message displays as expected and verify text color",
+            "match": {
+              "location": "DealerInspire_Steps.verify_warning_message_displays_as_expected_and_verify_text_color()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@dealerInspire"
+          }
+        ]
+      }
+    ],
+    "name": "Dealer Inspire login feature",
+    "description": "",
+    "id": "dealer-inspire-login-feature",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/dealerInspire.feature",
+    "tags": []
+  }
+]
